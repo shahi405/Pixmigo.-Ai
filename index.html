@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Portfolio - Web Developer, Designer & Creator">
+    <title>Professional Portfolio | Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-text">Portfolio</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#tools" class="nav-link">Tools</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Your Name</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Full-Stack Developer | Designer | Problem Solver
+                    </p>
+                    <p class="hero-description">
+                        I create beautiful, functional, and user-friendly digital experiences that make a difference.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <p class="about-text">
+                        I'm a passionate developer with expertise in creating modern web applications. 
+                        With a strong foundation in both front-end and back-end technologies, I bring 
+                        ideas to life through clean code and intuitive design. My goal is to build 
+                        products that not only look great but also provide exceptional user experiences.
+                    </p>
+                    <p class="about-text">
+                        I specialize in React, Node.js, Python, and modern web technologies. When I'm 
+                        not coding, you'll find me exploring new technologies, contributing to open-source 
+                        projects, or sharing knowledge with the developer community.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">🚀</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Platform</h3>
+                            <p class="project-description">
+                                A full-featured e-commerce platform built with React, Node.js, and MongoDB. 
+                                Includes payment integration, inventory management, and real-time analytics.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">📱</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Social Media Dashboard</h3>
+                            <p class="project-description">
+                                Analytics dashboard for social media management with real-time data 
+                                visualization, scheduling features, and multi-platform integration.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Vue.js</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">🎨</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Design System Library</h3>
+                            <p class="project-description">
+                                Comprehensive component library with 50+ reusable components, 
+                                documentation, and theming support for enterprise applications.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Storybook</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="tools">
+            <div class="container">
+                <h2 class="section-title">Useful Tools</h2>
+                
+                <!-- Scientific Calculator -->
+                <div class="tool-section">
+                    <h3 class="tool-title">Scientific Calculator</h3>
+                    <div class="calculator">
+                        <div class="calculator-display" id="calcDisplay">0</div>
+                        <div class="calculator-buttons">
+                            <button class="calc-btn calc-btn-function" onclick="clearCalculator()">C</button>
+                            <button class="calc-btn calc-btn-function" onclick="deleteLastChar()">⌫</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('(')">(</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay(')')">)</button>
+                            
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.sin(')">sin</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.cos(')">cos</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.tan(')">tan</button>
+                            <button class="calc-btn calc-btn-operator" onclick="appendToDisplay('/')">/</button>
+                            
+                            <button class="calc-btn" onclick="appendToDisplay('7')">7</button>
+                            <button class="calc-btn" onclick="appendToDisplay('8')">8</button>
+                            <button class="calc-btn" onclick="appendToDisplay('9')">9</button>
+                            <button class="calc-btn calc-btn-operator" onclick="appendToDisplay('*')">×</button>
+                            
+                            <button class="calc-btn" onclick="appendToDisplay('4')">4</button>
+                            <button class="calc-btn" onclick="appendToDisplay('5')">5</button>
+                            <button class="calc-btn" onclick="appendToDisplay('6')">6</button>
+                            <button class="calc-btn calc-btn-operator" onclick="appendToDisplay('-')">-</button>
+                            
+                            <button class="calc-btn" onclick="appendToDisplay('1')">1</button>
+                            <button class="calc-btn" onclick="appendToDisplay('2')">2</button>
+                            <button class="calc-btn" onclick="appendToDisplay('3')">3</button>
+                            <button class="calc-btn calc-btn-operator" onclick="appendToDisplay('+')">+</button>
+                            
+                            <button class="calc-btn" onclick="appendToDisplay('0')">0</button>
+                            <button class="calc-btn" onclick="appendToDisplay('.')">.</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.PI')">π</button>
+                            <button class="calc-btn calc-btn-equals" onclick="calculateResult()">=</button>
+                            
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.sqrt(')">√</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('**2')">x²</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('Math.log(')">log</button>
+                            <button class="calc-btn calc-btn-function" onclick="appendToDisplay('**')">xʸ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Age Calculator -->
+                <div class="tool-section">
+                    <h3 class="tool-title">Age Calculator</h3>
+                    <div class="age-calculator">
+                        <div class="age-input-group">
+                            <label for="birthdate">Enter Your Birth Date:</label>
+                            <input type="date" id="birthdate" class="age-input">
+                            <button class="btn btn-primary" onclick="calculateAge()">Calculate Age</button>
+                        </div>
+                        <div id="ageResult" class="age-result"></div>
+                    </div>
+                </div>
+
+                <!-- Live Gold & Silver Prices -->
+                <div class="tool-section">
+                    <h3 class="tool-title">Live Precious Metal Prices</h3>
+                    <div class="price-cards">
+                        <div class="price-card">
+                            <div class="price-icon">🥇</div>
+                            <h4 class="price-metal">Gold</h4>
+                            <div class="price-value" id="goldPrice">Loading...</div>
+                            <div class="price-unit">per troy ounce (USD)</div>
+                            <div class="price-change" id="goldChange"></div>
+                        </div>
+                        <div class="price-card">
+                            <div class="price-icon">🥈</div>
+                            <h4 class="price-metal">Silver</h4>
+                            <div class="price-value" id="silverPrice">Loading...</div>
+                            <div class="price-unit">per troy ounce (USD)</div>
+                            <div class="price-change" id="silverChange"></div>
+                        </div>
+                    </div>
+                    <div class="price-update">
+                        <button class="btn btn-secondary" onclick="refreshPrices()">Refresh Prices</button>
+                        <span class="price-timestamp" id="priceTimestamp"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-link">📧 your.email@example.com</a>
+                        <a href="https://github.com/yourusername" class="contact-link" target="_blank">💻 GitHub</a>
+                        <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank">💼 LinkedIn</a>
+                        <a href="https://twitter.com/yourusername" class="contact-link" target="_blank">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                &copy; 2025 Your Name. Built with passion and code.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
